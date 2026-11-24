@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@theme {
+  --color-navy: #181D50;
+  --color-royal: #1746A2;
+  --color-sky: #5F9DF7;
+  --color-orange: #FF731D;
+  --color-orange-hover: #FF8B45;
+  --color-cream: #FFF7E9;
+  --color-muted: #4B5079;
+  --color-line: #EADFCB;
+
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+}
+
+body {
+  @apply bg-cream text-navy font-body antialiased;
+}
