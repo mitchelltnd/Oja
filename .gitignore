@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+vendor/
+dist/
+build/
+.DS_Store
+CLAUDE.md
+oja-home.html
+oja-logo.html

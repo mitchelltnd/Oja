@@ -1,0 +1,170 @@
+<title>Oja Logo Samples</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&family=Fredoka:wght@600;700&display=swap">
+<style>
+/* Layout: a sample sheet. Each logo sits on cream and on navy side by side, with a small-size test row at the end. */
+:root{
+  --cream:#FFF7E9;
+  --navy:#181D50;
+  --royal:#1746A2;
+  --sky:#5F9DF7;
+  --orange:#FF731D;
+  --muted:#4B5079;
+  --line:#EADFCB;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Figtree","Segoe UI",system-ui,sans-serif;
+  --round:"Fredoka","Nunito","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:#FFFFFF;color:var(--navy);font-family:var(--body);line-height:1.55}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:48px 72px}
+h1{font-family:var(--display);font-size:clamp(30px,4vw,44px);letter-spacing:-.03em;line-height:1.05;margin:0 0 10px}
+.intro{color:var(--muted);max-width:60ch;margin:0 0 40px}
+.sample{border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:24px}
+.sample header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:16px 22px;border-bottom:1px solid var(--line)}
+.sample h2{font-size:17px;margin:0;font-weight:700}
+.sample header span{font-size:14px;color:var(--muted)}
+.pick{font-size:12.5px;font-weight:700;background:var(--orange);color:var(--navy);padding:3px 10px;border-radius:999px;margin-left:8px;vertical-align:2px}
+.pair{display:grid;grid-template-columns:1fr 1fr}
+.pair>div{min-height:200px;display:grid;place-items:center;padding:32px 20px}
+.on-cream{background:var(--cream);color:var(--navy)}
+.on-navy{background:var(--navy);color:var(--cream)}
+
+/* Wordmark: the dot is a drawn circle, so its size and colour stay exact in code */
+.wm{font-family:var(--display);font-weight:800;letter-spacing:-.045em;line-height:1;font-size:clamp(64px,9vw,96px);white-space:nowrap}
+.wm .dot{display:inline-block;width:.2em;height:.2em;border-radius:50%;background:var(--orange);margin-left:.05em;vertical-align:baseline}
+.wm.cap{letter-spacing:-.04em}
+.wm.round{font-family:var(--round);font-weight:700;letter-spacing:-.02em}
+.wm.round .dot{width:.21em;height:.21em}
+.wm.big-dot .dot{width:.3em;height:.3em;margin-left:.04em}
+.lockup{display:flex;align-items:center;gap:.22em;font-size:clamp(52px,7vw,76px)}
+.lockup .wm{font-size:1em}
+.lockup svg{height:1.3em;width:auto;flex:none;overflow:visible}
+.stack svg,.app svg{overflow:visible}
+.stack{display:flex;flex-direction:column;align-items:center;gap:6px}
+.stack svg{width:clamp(110px,14vw,140px);height:auto}
+.stack .wm{font-size:clamp(48px,6vw,64px)}
+
+/* App icons */
+.icons{display:flex;gap:28px;align-items:end;flex-wrap:wrap;justify-content:center}
+.app{border-radius:22%;display:grid;place-items:center;flex:none}
+.app .wm{font-size:inherit;letter-spacing:-.05em}
+.cap-txt{font-size:12.5px;color:inherit;opacity:.75;text-align:center;margin-top:8px}
+
+/* Small-size test */
+.small{display:flex;gap:28px;align-items:center;flex-wrap:wrap;padding:24px 22px;background:var(--cream)}
+.small .bar{display:flex;align-items:center;gap:12px;background:#FFFFFF;border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.small .bar span{font-size:13px;color:var(--muted)}
+
+/* Load-in: each sample's dot drops into place once, the same motion the real logo could use on page load */
+@keyframes drop{0%{transform:translateY(-1.2em);opacity:0}60%{transform:translateY(.08em);opacity:1}80%{transform:translateY(-.03em)}100%{transform:none}}
+.wm .dot{animation:drop .9s cubic-bezier(.3,1.4,.5,1) .3s both}
+@keyframes jiggle{0%,100%{transform:rotate(0)}30%{transform:rotate(-6deg)}60%{transform:rotate(4deg)}}
+.cart-anim:hover .items{animation:jiggle .5s ease-in-out;transform-origin:64px 34px;transform-box:view-box}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+@media (max-width:700px){.pair{grid-template-columns:1fr}.pair>div{min-height:160px}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- Full cart: frame uses currentColor so it flips between navy and cream; items keep palette colours -->
+  <symbol id="cart" viewBox="0 0 124 100">
+    <g class="items">
+      <rect x="62" y="-2" width="15" height="44" rx="7.5" fill="#F2B36B" transform="rotate(32 69 20)"/>
+      <path d="M63 10 l7 4 M60 17 l7 4 M57 24 l7 4" stroke="#C9813A" stroke-width="2.2" stroke-linecap="round" transform="rotate(32 69 20) translate(6 -2)"/>
+      <rect x="32" y="9" width="15" height="30" rx="4" fill="#1746A2"/>
+      <rect x="36" y="2" width="7" height="9" rx="2" fill="#1746A2"/>
+      <rect x="32" y="18" width="15" height="8" fill="#FFF7E9" opacity=".85"/>
+      <path d="M46 16 l10 -7 h11 l10 7 -6 9 -4 -2 v16 h-22 v-16 l-4 2z" fill="#5F9DF7"/>
+      <path d="M56 9 q5.5 6 11 0" stroke="#1746A2" stroke-width="2" fill="none"/>
+      <circle cx="88" cy="25" r="12" fill="#FF731D"/>
+      <path d="M88 13 q4 -7 10 -5 q-3 6 -10 5z" fill="#2E8B57"/>
+    </g>
+    <path d="M6 12 h12 l12 54 h64 l10 -36 H26" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="40" cy="84" r="7.5" fill="currentColor"/>
+    <circle cx="86" cy="84" r="7.5" fill="currentColor"/>
+  </symbol>
+  <!-- Cart where the orange dot is the only item: ties the cart to the wordmark's dot -->
+  <symbol id="cart-dot" viewBox="0 0 124 100">
+    <circle cx="66" cy="20" r="15" fill="var(--dot,#FF731D)"/>
+    <path d="M6 12 h12 l12 54 h64 l10 -36 H26" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="40" cy="84" r="7.5" fill="currentColor"/>
+    <circle cx="86" cy="84" r="7.5" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<div class="wrap">
+  <h1>Oja logo samples</h1>
+  <p class="intro">Every sample uses the Sunshine palette. The dot is your orange, #FF731D. Each one is shown on cream and on navy so you can see both. Hover a cart to see it wobble.</p>
+
+  <section class="sample">
+    <header><h2>1. Lowercase with orange dot</h2><span>Bricolage Grotesque, extra bold</span></header>
+    <div class="pair"><div class="on-cream"><span class="wm">oja<i class="dot"></i></span></div><div class="on-navy"><span class="wm">oja<i class="dot"></i></span></div></div>
+  </section>
+
+  <section class="sample">
+    <header><h2>2. Capital O with orange dot <span class="pick">Chosen</span></h2><span>Same font, reads more like a company name</span></header>
+    <div class="pair"><div class="on-cream"><span class="wm cap">Oja<i class="dot"></i></span></div><div class="on-navy"><span class="wm cap">Oja<i class="dot"></i></span></div></div>
+  </section>
+
+  <section class="sample">
+    <header><h2>3. Rounded and friendly</h2><span>Fredoka, softer and more playful</span></header>
+    <div class="pair"><div class="on-cream"><span class="wm round">oja<i class="dot"></i></span></div><div class="on-navy"><span class="wm round">oja<i class="dot"></i></span></div></div>
+  </section>
+
+  <section class="sample">
+    <header><h2>4. Bigger dot</h2><span>The dot works as a little mark on its own</span></header>
+    <div class="pair"><div class="on-cream"><span class="wm big-dot">oja<i class="dot"></i></span></div><div class="on-navy"><span class="wm big-dot">oja<i class="dot"></i></span></div></div>
+  </section>
+
+  <section class="sample">
+    <header><h2>5. Full cart + wordmark</h2><span>Clothes, bread, a drink and an orange in the cart</span></header>
+    <div class="pair">
+      <div class="on-cream"><span class="lockup cart-anim"><svg viewBox="0 0 124 100"><use href="#cart"/></svg><span class="wm">oja<i class="dot"></i></span></span></div>
+      <div class="on-navy"><span class="lockup cart-anim"><svg viewBox="0 0 124 100"><use href="#cart"/></svg><span class="wm">oja<i class="dot"></i></span></span></div>
+    </div>
+  </section>
+
+  <section class="sample">
+    <header><h2>6. Stacked cart</h2><span>For app splash screens, receipts and packaging</span></header>
+    <div class="pair">
+      <div class="on-cream"><span class="stack cart-anim"><svg viewBox="0 0 124 100"><use href="#cart"/></svg><span class="wm">oja<i class="dot"></i></span></span></div>
+      <div class="on-navy"><span class="stack cart-anim"><svg viewBox="0 0 124 100"><use href="#cart"/></svg><span class="wm">oja<i class="dot"></i></span></span></div>
+    </div>
+  </section>
+
+  <section class="sample">
+    <header><h2>7. Cart carrying the dot</h2><span>Simpler cart: the orange dot from the name sits inside it</span></header>
+    <div class="pair">
+      <div class="on-cream"><span class="lockup"><svg viewBox="0 0 124 100"><use href="#cart-dot"/></svg><span class="wm">oja</span></span></div>
+      <div class="on-navy"><span class="lockup"><svg viewBox="0 0 124 100"><use href="#cart-dot"/></svg><span class="wm">oja</span></span></div>
+    </div>
+  </section>
+
+  <section class="sample">
+    <header><h2>8. App icons</h2><span>For the phone home screen and browser tab</span></header>
+    <div class="pair">
+      <div class="on-cream"><div class="icons">
+        <div><div class="app" style="width:96px;height:96px;background:#181D50;color:#FFF7E9;font-size:44px"><span class="wm">o<i class="dot"></i></span></div><div class="cap-txt">Letter + dot</div></div>
+        <div><div class="app" style="width:96px;height:96px;background:#181D50;color:#FFF7E9"><svg viewBox="0 0 124 100" width="70"><use href="#cart"/></svg></div><div class="cap-txt">Full cart</div></div>
+        <div><div class="app" style="width:96px;height:96px;background:#FF731D;color:#181D50;--dot:#FFF7E9"><svg viewBox="0 0 124 100" width="68"><use href="#cart-dot"/></svg></div><div class="cap-txt">Orange cart</div></div>
+      </div></div>
+      <div class="on-navy"><div class="icons">
+        <div><div class="app" style="width:96px;height:96px;background:#FFF7E9;color:#181D50;font-size:44px"><span class="wm">o<i class="dot"></i></span></div><div class="cap-txt">Letter + dot</div></div>
+        <div><div class="app" style="width:96px;height:96px;background:#1746A2;color:#FFF7E9"><svg viewBox="0 0 124 100" width="70"><use href="#cart"/></svg></div><div class="cap-txt">Full cart</div></div>
+        <div><div class="app" style="width:96px;height:96px;background:#FFF7E9;color:#181D50"><svg viewBox="0 0 124 100" width="68"><use href="#cart-dot"/></svg></div><div class="cap-txt">Cream cart</div></div>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="sample">
+    <header><h2>Small-size test</h2><span>How they hold up in a header and a browser tab</span></header>
+    <div class="small">
+      <div class="bar"><span class="wm" style="font-size:28px">oja<i class="dot"></i></span><span>Header, 28px</span></div>
+      <div class="bar"><span class="lockup" style="font-size:26px"><svg viewBox="0 0 124 100"><use href="#cart"/></svg><span class="wm">oja<i class="dot"></i></span></span><span>Cart lockup, 26px</span></div>
+      <div class="bar"><div class="app" style="width:32px;height:32px;background:#181D50;color:#FFF7E9;font-size:16px"><span class="wm">o<i class="dot"></i></span></div><div class="app" style="width:32px;height:32px;background:#181D50;color:#FFF7E9"><svg viewBox="0 0 124 100" width="24"><use href="#cart"/></svg></div><div class="app" style="width:32px;height:32px;background:#FF731D;color:#181D50;--dot:#FFF7E9"><svg viewBox="0 0 124 100" width="23"><use href="#cart-dot"/></svg></div><span>Tab icons, 32px</span></div>
+    </div>
+  </section>
+</div>
