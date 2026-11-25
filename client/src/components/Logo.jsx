@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Logo = ({ className = '' }) => {
   return (
     <span className={`group inline-flex items-baseline font-display font-extrabold tracking-[-0.04em] leading-none text-navy ${className}`}>Oja
